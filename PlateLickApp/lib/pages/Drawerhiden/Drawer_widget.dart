@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../Avatar_progerss.dart';
 import '../chart.dart';
 import 'drawer_items.dart';
-import '../Recipe_Page.dart';
 
 class DrawerWidget extends StatefulWidget {
   VoidCallback closdDrawer;
@@ -57,10 +56,7 @@ class _DrawerWidgetState extends State<DrawerWidget>
                       item.title,
                       style: const TextStyle(color: Colors.white),
                     ),
-                    onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => RecipePage()));
-                    },
+                    onTap: () {},
                   ))
               .toList(),
         ),
