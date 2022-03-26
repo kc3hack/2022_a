@@ -50,7 +50,9 @@ class AuthGate extends StatelessWidget {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
-          return SignInScreen(providerConfigs: []);
+          return SignInScreen(providerConfigs: [
+            EmailProviderConfiguration(),
+          ]);
         }
 
         // Render your application if authenticated
