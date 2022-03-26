@@ -70,7 +70,7 @@ dependencies:
   page_transition: ^2.0.5
 
 flutter_icons:
-  image_path: "assets/PlateLick.png"
+  image_path: "assets/Avatar.jpg"
   android: true
   ios: true
 
@@ -89,7 +89,7 @@ dev_dependencies:
 flutter_native_splash:
   color: "#ffffff"
   color_dark: "#3450A1"
-  image: "assets/PlateLick.png"
+  image: "assets/Splash.png"
   android: true
   ios: true
 
