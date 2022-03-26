@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		I8Wq5PehDl1Bc1jROKfZ6kTs4J8=
+		ohYrr6kqUMPUibnix2Z/JCJLfNE=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -23,6 +23,10 @@
 		<key>flutter_assets/assets/Avatar.jpg</key>
 		<data>
 		xhky+L85+njIA+dU6671Lrx1KxM=
+		</data>
+		<key>flutter_assets/assets/dishes_3600.json</key>
+		<data>
+		oTIRcAiAAsGmOMZvXiZ5bHJtKXU=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -63,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tx1fJFogBy9/LHUTgcBPR2zxh7KIAWqfWpWPxVB8Cvc=
+			toddQDnfEp5aGzNxsyW4c/F9c7JgdJtQabYynLlb3cw=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -85,6 +89,13 @@
 			<key>hash2</key>
 			<data>
 			lcxRZ/F3PLstoZx9Lx5ZgcIYVBhZ5zyik8ltiisy+5c=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/dishes_3600.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y5VzRwkdDk3rPugtaufIsvSMgy2vu+yFubvXLhP+bBQ=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>

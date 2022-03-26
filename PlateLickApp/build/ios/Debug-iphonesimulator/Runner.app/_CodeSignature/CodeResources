@@ -110,7 +110,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		pFTBd9cL8JpdSRps5eEX4HHv31U=
+		eK7R5oInOngmNAPXTBl5bgLzEKM=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -118,11 +118,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		EBktwyfDYxq3y6E+97f5Sccf3ao=
+		Gmofz3MRlR2ulXnHybuyGMpenZs=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		I8Wq5PehDl1Bc1jROKfZ6kTs4J8=
+		ohYrr6kqUMPUibnix2Z/JCJLfNE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -135,6 +135,10 @@
 		<key>Frameworks/App.framework/flutter_assets/assets/Avatar.jpg</key>
 		<data>
 		xhky+L85+njIA+dU6671Lrx1KxM=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/dishes_3600.json</key>
+		<data>
+		oTIRcAiAAsGmOMZvXiZ5bHJtKXU=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -509,7 +513,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qyb7igqbDSA1IsuTm0whOQtre75QmRjcifxiMkSWkfI=
+			0mE8JzDMPJSc31pnaHv/b3bQJyoEer8e5aNzBrDsErg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -523,14 +527,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7z4QG3j0e+xct904RkmRUzNe3v52aDPtFZ+Jr7VRdgA=
+			pAwYeOOoW4RNyz5449Bbzo6/5rpKYcKG1IJBtMzpe20=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tx1fJFogBy9/LHUTgcBPR2zxh7KIAWqfWpWPxVB8Cvc=
+			toddQDnfEp5aGzNxsyW4c/F9c7JgdJtQabYynLlb3cw=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -552,6 +556,13 @@
 			<key>hash2</key>
 			<data>
 			lcxRZ/F3PLstoZx9Lx5ZgcIYVBhZ5zyik8ltiisy+5c=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/dishes_3600.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y5VzRwkdDk3rPugtaufIsvSMgy2vu+yFubvXLhP+bBQ=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
