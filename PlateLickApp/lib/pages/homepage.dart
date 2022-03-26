@@ -11,6 +11,11 @@ import '../db/notes_database.dart';
 import '../model/note.dart';
 import 'button_change_them.dart';
 import 'card_tasks.dart';
+// Navbar
+import 'package:flutter_todo/constants/color.dart';
+import 'package:flutter_todo/constants/text_style.dart';
+import 'package:flutter_todo/data/model.dart';
+import 'package:flutter_todo/widgets/custom_paint.dart';
 
 class MyHomePage extends StatefulWidget {
   VoidCallback opendrawer;
@@ -21,6 +26,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int currentIndex = 0;
   List<String> all_selected_tasks = []; // your tasks
 
   List<Note> notes = []; // get info from Database and add to this list
@@ -174,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
               alignment: Alignment.topLeft,
               margin: const EdgeInsets.only(left: 15, bottom: 15),
               child: Text(
-                "TODAY'S TASKS",
+                "RECOMMENDED RECIPE",
                 style: TextStyle(
                     letterSpacing: 1,
                     color: Colors.grey.withOpacity(0.8),
@@ -185,7 +191,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 delay: 1,
                 child: SizedBox(
                     width: we * 0.9,
-                    height: he * 0.4,
+                    height: he * 0.2,
                     child: isLoading
                         ? const CircularProgressIndicator()
                         : notes.isEmpty
@@ -246,6 +252,40 @@ class _MyHomePageState extends State<MyHomePage> {
                                 }).toList()))),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        selectedItemColor: Theme.of(context).primaryColor,
+        unselectedItemColor: Colors.white.withOpacity(0.5),
+        currentIndex: currentIndex,
+        onTap: (index) => setState(() => currentIndex = index),
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.blue.withOpacity(0.5),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Recipes',
+            backgroundColor: Colors.orange.withOpacity(0.5),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'Favorite',
+            backgroundColor: Colors.red.withOpacity(0.5),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Notifications',
+            backgroundColor: Colors.green.withOpacity(0.5),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Account',
+            backgroundColor: Colors.black.withOpacity(0.5),
+          ),
+        ],
       ),
       floatingActionButton: FadeAnimation(
         delay: 1.2,
