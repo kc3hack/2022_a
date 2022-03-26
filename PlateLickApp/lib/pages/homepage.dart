@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
             backgroundColor: Colors.blue.withOpacity(0.5),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.receipt_long_rounded),
             label: 'Recipes',
             backgroundColor: Colors.orange.withOpacity(0.5),
           ),

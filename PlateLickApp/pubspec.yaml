@@ -68,6 +68,7 @@ dependencies:
 
   # Animation Navaigtion page ...
   page_transition: ^2.0.5
+  firebase_core: ^1.13.1
 
 flutter_icons:
   image_path: "assets/Avatar.jpg"
