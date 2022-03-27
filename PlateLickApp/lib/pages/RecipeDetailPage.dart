@@ -57,7 +57,7 @@ class _RecipeDetailPageState extends State<RecipeDetailPage> {
             ),
           );
         },
-        childCount: 3,
+        childCount: widget.ingredients.length,
       ))
     ]);
   }
