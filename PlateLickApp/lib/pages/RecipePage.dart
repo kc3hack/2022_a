@@ -88,6 +88,13 @@ class _RecipePageState extends State<RecipePage> {
 }
 
 class MySearchDelegate extends SearchDelegate {
+  List<String> searchResults = [
+    "Apple",
+    "Banana",
+    "Cherry",
+    "Durian",
+    "Elderberry",
+  ];
   @override
   Widget? buildLeading(BuildContext context) => IconButton(
         icon: const Icon(Icons.arrow_back),
@@ -117,33 +124,15 @@ class MySearchDelegate extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    List suggestions = [
-      'Apple',
-      'Banana',
-      'Cherry',
-      'Date',
-      'Elderberry',
-      'Fig',
-      'Grape',
-      'Honeydew',
-      'Ipe',
-      'Jackfruit',
-      'Kiwi',
-      'Lemon',
-      'Mango',
-      'Nectarine',
-      'Orange',
-      'Papaya',
-      'Quince',
-      'Raspberry',
-      'Strawberry',
-      'Tomato',
-      'Ugli fruit',
-      'Watermelon',
-    ];
+    List suggestions = searchResults.where((searchResult) {
+      final result = searchResult.toLowerCase();
+      final input = query.toLowerCase();
+
+      return result.contains(input);
+    }).toList();
 
     return ListView.builder(
-      itemCount: 3,
+      itemCount: suggestions.length,
       itemBuilder: (context, index) {
         final suggestion = suggestions[index];
 
