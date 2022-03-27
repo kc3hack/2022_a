@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_todo/pages/homepage.dart';
+import 'RecipeDetailPage.dart';
 
 class RecipePage extends StatefulWidget {
   @override
@@ -18,6 +19,12 @@ class _RecipePageState extends State<RecipePage> {
     setState(() {
       _items = data["items"];
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    readJson();
   }
 
   @override
@@ -43,11 +50,6 @@ class _RecipePageState extends State<RecipePage> {
         padding: const EdgeInsets.all(25),
         child: Column(
           children: [
-            ElevatedButton(
-              child: const Text('Load Data'),
-              onPressed: readJson,
-            ),
-
             // Display the data loaded from sample.json
             _items.isNotEmpty
                 ? Expanded(
@@ -59,6 +61,19 @@ class _RecipePageState extends State<RecipePage> {
                           child: ListTile(
                             title: Text(_items[index]["title"]),
                             subtitle: Text(_items[index]["url"]),
+                            textColor: Theme.of(context).primaryColor,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RecipeDetailPage(
+                                      title: _items[index]["title"],
+                                      url: _items[index]["url"],
+                                      ingredients: _items[index]
+                                          ["ingredients"]),
+                                ),
+                              );
+                            },
                           ),
                         );
                       },

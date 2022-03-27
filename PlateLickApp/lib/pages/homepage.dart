@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../Animation/fadeAnimation.dart';
-import 'package:flutter_todo/pages/HomeNavPage.dart';
+import 'package:flutter_todo/pages/IngredientsPage.dart';
 import 'package:flutter_todo/pages/note_task.dart';
 
 import '../db/notes_database.dart';
@@ -8,9 +8,10 @@ import '../model/note.dart';
 import 'button_change_them.dart';
 import 'card_tasks.dart';
 
+import 'HomeNavPage.dart';
 import 'RecipePage.dart';
 import 'FavoritePage.dart';
-import 'NotificationPage.dart';
+import 'IngredientsPage.dart';
 import 'AccountPage.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -27,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
     HomeNavPage(),
     RecipePage(),
     FavoritePage(),
-    NotificationPage(),
+    IngredientsPage(),
     AccountPage(),
   ];
 
@@ -86,8 +87,8 @@ class _MyHomePageState extends State<MyHomePage> {
             backgroundColor: Colors.red.withOpacity(0.5),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'Notifications',
+            icon: Icon(Icons.check_box_outline_blank_outlined),
+            label: 'Ingredients',
             backgroundColor: Colors.green.withOpacity(0.5),
           ),
           BottomNavigationBarItem(

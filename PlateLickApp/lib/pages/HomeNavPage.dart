@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import '../Animation/fadeAnimation.dart';
-import 'package:flutter_todo/pages/note_task.dart';
-import 'package:page_transition/page_transition.dart';
-import '../data/shared/Task_saved.dart';
-import '../db/notes_database.dart';
+// import 'package:flutter_todo/pages/note_task.dart';
+// import 'package:page_transition/page_transition.dart';
+// import '../data/shared/Task_saved.dart';
+// import '../db/notes_database.dart';
 import '../model/note.dart';
-import 'button_change_them.dart';
-import 'card_tasks.dart';
+// import 'button_change_them.dart';
+// import 'card_tasks.dart';
 
 import '../data/tasks.dart';
 import '../Animation/linearprogress.dart';
 import '../data/time_say.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
+// import 'package:flutter_slidable/flutter_slidable.dart';
 
 class HomeNavPage extends StatefulWidget {
   HomeNavPage({Key? key}) : super(key: key);
@@ -27,27 +27,27 @@ class _HomeNavPageState extends State<HomeNavPage> {
 
   bool isLoading = false;
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    all_selected_tasks = TaskerPreference.getString() ?? [];
-    super.initState();
-    refreshNote();
-  }
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   all_selected_tasks = TaskerPreference.getString() ?? [];
+  //   super.initState();
+  //   refreshNote();
+  // }
 
-  @override
-  void dispose() {
-    // TODO: close Database of Note ...
-    NotesDatabase.instance.close();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   // TODO: close Database of Note ...
+  //   NotesDatabase.instance.close();
+  //   super.dispose();
+  // }
 
-  // Todo for load notd from Database ..
-  Future refreshNote() async {
-    setState(() => true);
-    notes = await NotesDatabase.instance.readAllNotes();
-    setState(() => false);
-  }
+  // // Todo for load notd from Database ..
+  // Future refreshNote() async {
+  //   setState(() => true);
+  //   notes = await NotesDatabase.instance.readAllNotes();
+  //   setState(() => false);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -156,102 +156,102 @@ class _HomeNavPageState extends State<HomeNavPage> {
                     fontSize: 13),
               ),
             ),
-            FadeAnimation(
-                delay: 1,
-                child: SizedBox(
-                    width: we * 0.9,
-                    height: he * 0.2,
-                    child: isLoading
-                        ? const CircularProgressIndicator()
-                        : notes.isEmpty
-                            ? Container(
-                                margin:
-                                    const EdgeInsets.only(left: 130, top: 120),
-                                child: Text("No Tasks",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Theme.of(context).primaryColor,
-                                    )))
-                            : ListView(
-                                physics: const BouncingScrollPhysics(),
-                                children: notes.map((note) {
-                                  final IsSelected = all_selected_tasks
-                                      .contains(note.description);
+            // FadeAnimation(
+            //     delay: 1,
+            //     child: SizedBox(
+            //         width: we * 0.9,
+            //         height: he * 0.2,
+            //         child: isLoading
+            //             ? const CircularProgressIndicator()
+            //             : notes.isEmpty
+            //                 ? Container(
+            //                     margin:
+            //                         const EdgeInsets.only(left: 130, top: 120),
+            //                     child: Text("No Tasks",
+            //                         style: TextStyle(
+            //                           fontSize: 20,
+            //                           color: Theme.of(context).primaryColor,
+            //                         )))
+            //                 : ListView(
+            //                     physics: const BouncingScrollPhysics(),
+            //                     children: notes.map((note) {
+            //                       final IsSelected = all_selected_tasks
+            //                           .contains(note.description);
 
-                                  return Slidable(
-                                      endActionPane: ActionPane(
-                                        // A motion is a widget used to control how the pane animates.
-                                        motion: const StretchMotion(),
+            //                       return Slidable(
+            //                           endActionPane: ActionPane(
+            //                             // A motion is a widget used to control how the pane animates.
+            //                             motion: const StretchMotion(),
 
-                                        // A pane can dismiss the Slidable.
+            //                             // A pane can dismiss the Slidable.
 
-                                        // All actions are defined in the children parameter.
-                                        children: [
-                                          // A SlidableAction can have an icon and/or a label.
-                                          SlidableAction(
-                                            onPressed: (context) async {
-                                              NotesDatabase.instance
-                                                  .delete(note.id!);
-                                              refreshNote();
-                                            },
-                                            backgroundColor: Color(0xFFFE4A49),
-                                            foregroundColor: Colors.white,
-                                            icon: Icons.delete,
-                                            label: "Delete",
-                                          ),
-                                          SlidableAction(
-                                            onPressed: (context) async {
-                                              await Navigator.of(context).push(
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          Note_Task(
-                                                            note: note,
-                                                          )));
-                                              refreshNote();
-                                            },
-                                            backgroundColor:
-                                                const Color(0xFF21B7CA),
-                                            foregroundColor: Colors.white,
-                                            label: "Edit",
-                                            icon: Icons.edit,
-                                          ),
-                                        ],
-                                      ),
-                                      child: builditem(note, IsSelected));
-                                }).toList()))),
+            //                             // All actions are defined in the children parameter.
+            //                             children: [
+            //                               // A SlidableAction can have an icon and/or a label.
+            //                               SlidableAction(
+            //                                 onPressed: (context) async {
+            //                                   NotesDatabase.instance
+            //                                       .delete(note.id!);
+            //                                   refreshNote();
+            //                                 },
+            //                                 backgroundColor: Color(0xFFFE4A49),
+            //                                 foregroundColor: Colors.white,
+            //                                 icon: Icons.delete,
+            //                                 label: "Delete",
+            //                               ),
+            //                               SlidableAction(
+            //                                 onPressed: (context) async {
+            //                                   await Navigator.of(context).push(
+            //                                       MaterialPageRoute(
+            //                                           builder: (context) =>
+            //                                               Note_Task(
+            //                                                 note: note,
+            //                                               )));
+            //                                   refreshNote();
+            //                                 },
+            //                                 backgroundColor:
+            //                                     const Color(0xFF21B7CA),
+            //                                 foregroundColor: Colors.white,
+            //                                 label: "Edit",
+            //                                 icon: Icons.edit,
+            //                               ),
+            //                             ],
+            //                           ),
+            //                           child: builditem(note, IsSelected));
+            //                     }).toList()))),
           ],
         ),
       ),
-      floatingActionButton: FadeAnimation(
-        delay: 1.2,
-        child: FloatingActionButton(
-          onPressed: () async {
-            await Navigator.of(context).push(PageTransition(
-                type: PageTransitionType.fade, child: const Note_Task()));
-            refreshNote();
-          },
-          backgroundColor:
-              const FloatingActionButtonThemeData().backgroundColor,
-          child: const Icon(Icons.add),
-        ),
-      ),
+      // floatingActionButton: FadeAnimation(
+      //   delay: 1.2,
+      //   child: FloatingActionButton(
+      //     onPressed: () async {
+      //       await Navigator.of(context).push(PageTransition(
+      //           type: PageTransitionType.fade, child: const Note_Task()));
+      //       refreshNote();
+      //     },
+      //     backgroundColor:
+      //         const FloatingActionButtonThemeData().backgroundColor,
+      //     child: const Icon(Icons.add),
+      //   ),
+      // ),
     );
   }
 
-  // TODO : Tasks Items ...
-  Widget builditem(Note item, IsSelected) {
-    return CardTasks(
-      Index: item.id!,
-      onSelected: (tasks) async {
-        setState(() {
-          IsSelected
-              ? all_selected_tasks.remove(item.description)
-              : all_selected_tasks.add(item.description);
-        });
-        TaskerPreference.setStringList(all_selected_tasks);
-      },
-      isActive: IsSelected,
-      taskuser: item,
-    );
-  }
+  // // TODO : Tasks Items ...
+  // Widget builditem(Note item, IsSelected) {
+  //   return CardTasks(
+  //     Index: item.id!,
+  //     onSelected: (tasks) async {
+  //       setState(() {
+  //         IsSelected
+  //             ? all_selected_tasks.remove(item.description)
+  //             : all_selected_tasks.add(item.description);
+  //       });
+  //       TaskerPreference.setStringList(all_selected_tasks);
+  //     },
+  //     isActive: IsSelected,
+  //     taskuser: item,
+  //   );
+  // }
 }
