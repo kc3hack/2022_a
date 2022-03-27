@@ -20,6 +20,7 @@ class _AccountPageState extends State<AccountPage> {
       } else {
         setState(() {
           _button1text = '${user.email} is signed in!';
+          _text1text = '${user.uid}';
         });
         print('${user.email} is signed in!');
       }
@@ -46,7 +47,7 @@ class _AccountPageState extends State<AccountPage> {
         ),
         ElevatedButton(
           style: style,
-          onPressed: () {
+          onPressed: () async {
             _signOut();
           },
           child: Text('Logout'),
@@ -60,7 +61,7 @@ class _AccountPageState extends State<AccountPage> {
     //setState(() {
     //  _buttonisenabled = !_buttonisenabled;
     //});
-    CreateAccount("email", "password");
+    //CreateAccount("email", "password");
   }
 
   CreateAccount(var email, var password) async {
@@ -82,6 +83,7 @@ class _AccountPageState extends State<AccountPage> {
   }
 
   Future<void> _signOut() async {
+    FirebaseAuth auth = FirebaseAuth.instance;
     await auth.signOut();
   }
 }
